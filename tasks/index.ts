@@ -22,7 +22,7 @@ task("accounts_balance", "Prints an account's balance")
   });
 
 
-task("deploy", "Deploy SmallToken contract").setAction(async (_, hre) => {
+task("deployTask", "Deploy SmallToken contract").setAction(async (_, hre) => {
   const { network } = hre;
   const [dev] = await hre.ethers.getSigners();
 

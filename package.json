@@ -7,7 +7,9 @@
     "test": "hardhat test test/SmallToken.ts",
     "start": "hardhat node",
     "localhost": "hardhat run --network localhost scripts/deploySmllToken.ts",
-    "bscTest": "hardhat run --network bscTest scripts/deploySmllToken.ts"
+    "bscTest": "hardhat run --network bscTest scripts/deploySmllToken.ts",
+    "proxyAdmin": "hardhat deploy --network localhost --tags ProxyAdmin",
+    "deploy": "hardhat deploy --network localhost --tags MyContract"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.8.2",

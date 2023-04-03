@@ -1,12 +1,16 @@
-import { DeployFunction } from "hardhat-deploy/dist/types";
+import { DeployFunction, DeployOptions, DeployResult } from "hardhat-deploy/types";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { readAddressList, storeAddressList } from "../scripts/helper";
+
+// declare const deploy: (name: string, options: DeployOptions) => Promise<DeployResult>
 
 const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { deployments, getNamedAccounts, network } = hre;
   const { deploy } = deployments;
 
   const { deployer } = await getNamedAccounts();
+  // console.log("deployments: ", deployments)
+
   // const [deployer] = await hre.ethers.getSigners()
   console.log("Deploying ProxyAdmin with account:", deployer);
 
